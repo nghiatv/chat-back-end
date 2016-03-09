@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chat system</title>
+    <title>Read Logs</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap/css/AdminLTE.min.css">
     <link rel="stylesheet" href="bootstrap/animate.css">
@@ -15,18 +15,18 @@
 
 <body>
 <div class="content-wrapper">
-   <section class="content-header">
-       <h1>
-           Hệ thống chat
-           <small></small>
-       </h1>
-   </section>
+    <section class="content-header">
+        <h1>
+            Lịch sử Chat
+            <small></small>
+        </h1>
+    </section>
     <section class="content">
         <section class="container box box-info">
             <div class="row">
-                <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3  no-padding">
+                <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3 no-padding">
                     <div id="chat-wrapper" class="tab-content chat-wrapper" style="display: block;">
-                        <div id="home" class="tab-pane fade in active  row">
+                        <div id="menu1" class="tab-pane fade in active  row">
                             <div class="col-xs-12">
                                 <header class="header-chat">
                                     <div class="default-nav">
@@ -194,10 +194,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class=" input-form chat-bottom">
-                                    <textarea class="userMessage"
-                                              placeholder="Bạn cần hỗ trợ? Gửi ngay cho chúng tôi"></textarea>
-                                    </div>
+
                                 </div>
                                 <div class=" chat-info">
                                     <div class="chat-info-name">
@@ -211,7 +208,9 @@
                                         </a></li>
                                         <li><a href="#">
                                             <h4>User-agent</h4>
-                                            <p>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36</p>
+
+                                            <p>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36
+                                                (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36</p>
                                         </a></li>
                                         <li><a href="#">
                                             <h4>Recent Link</h4>
@@ -223,7 +222,7 @@
                             </div>
 
                         </div>
-                        <div id="menu1" class="tab-pane fade in  row">
+                        <div id="home" class="tab-pane fade in  row">
                             <div class="col-xs-12">
                                 <header class="header-chat">
                                     <div class="default-nav">
@@ -394,10 +393,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class=" input-form chat-bottom">
-                                    <textarea class="userMessage"
-                                              placeholder="Bạn cần hỗ trợ? Gửi ngay cho chúng tôi"></textarea>
-                                    </div>
+
                                 </div>
                                 <div class=" chat-info">
                                     1 cai gi day cung khuong biet duoc nhe
@@ -576,10 +572,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class=" input-form chat-bottom">
-                                    <textarea class="userMessage"
-                                              placeholder="Bạn cần hỗ trợ? Gửi ngay cho chúng tôi"></textarea>
-                                    </div>
+
                                 </div>
                                 <div class=" chat-info">
                                     1 cai gi day cung khuong biet duoc nhe
@@ -758,10 +751,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class=" input-form chat-bottom">
-                                    <textarea class="userMessage"
-                                              placeholder="Bạn cần hỗ trợ? Gửi ngay cho chúng tôi"></textarea>
-                                    </div>
+
                                 </div>
                                 <div class=" chat-info">
                                     1 cai gi day cung khuong biet duoc nhe
@@ -940,10 +930,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class=" input-form chat-bottom">
-                                    <textarea class="userMessage"
-                                              placeholder="Bạn cần hỗ trợ? Gửi ngay cho chúng tôi"></textarea>
-                                    </div>
+
                                 </div>
                                 <div class=" chat-info">
                                     1 cai gi day cung khuong biet duoc nhe
@@ -1122,10 +1109,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class=" input-form chat-bottom">
-                                    <textarea class="userMessage"
-                                              placeholder="Bạn cần hỗ trợ? Gửi ngay cho chúng tôi"></textarea>
-                                    </div>
+
+
+
                                 </div>
                                 <div class=" chat-info">
                                     1 cai gi day cung khuong biet duoc nhe
@@ -1135,49 +1121,41 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9 no-padding list-sidebar">
+                <div class="col-xs-12 col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9 list-sidebar no-padding">
                     <div class="list-client-title">
-                        <h4> Danh sách Tin nhắn</h4>
+                        <h4>Danh sách Các Bản Ghi</h4>
                     </div>
-                    <ul class="nav nav-pills nav-stacked">
-
-                        <li class="active"><a data-toggle="tab" href="#home"><h4>Client 0
-                            <i class="fa fa-circle" style=" margin-left: 10px;font-size: 14px; color: green;"></i>
-                            <i class="fa fa-save" style=" margin-left: 10px;font-size: 14px;"></i>
-                            <button type="button" class="close"  aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        </h4>
-                            <p>192.168.1.1</p></a></li>
-                        <li><a data-toggle="tab" href="#menu1">
-                            <h4>Client 1</h4>
-
-                            <p>192.168.1.1</p>
-                        </a></li>
-                        <li><a data-toggle="tab" href="#menu2"><h4>Client 1</h4>
-
-                            <p>192.168.1.1</p></a></li>
-                        <li><a data-toggle="tab" href="#menu3"><h4>Client 2</h4>
-
-                            <p>192.168.1.1</p></a></li>
-                        <li><a data-toggle="tab" href="#menu4"><h4>Client 3</h4>
-
-                            <p>192.168.1.1</p></a></li>
-                        <li><a data-toggle="tab" href="#menu5"><h4>Client 4</h4>
-
-                            <p>192.168.1.1</p></a></li>
-                        <li><a data-toggle="tab" href="#menu4"><h4>Client 5</h4>
-
-                            <p>192.168.1.1</p></a></li>
-                        <li><a data-toggle="tab" href="#menu5"><h4>Client 6</h4>
-
-                            <p>192.168.1.1</p></a></li>
-                        <li><a data-toggle="tab" href="#menu4"><h4>Client 7</h4>
-
-                            <p>192.168.1.1</p></a></li>
-                        <li><a data-toggle="tab" href="#menu3"><h4>Client 8</h4>
-
-                            <p>192.168.1.1</p></a></li>
-                        <!--<li><a href="#">Menu 3</a></li>-->
-                    </ul>
+                    <div id="timeline" class="">
+                        <ul class="todo-list nav nav-stacked">
+                            <li>
+                                <a class="chatTime" href="#"> Tue Mar 08 2016 <i class="fa fa-angle-up"
+                                                                                 style="margin-left: 5px"></i> </a>
+                                <ul class="todo-list">
+                                    <li>
+                                        <span class="handle"></span>
+                                        <a data-toggle="tab" href="#home">client 12</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!--<ul class="pagination">-->
+                            <!--<li>-->
+                                <!--<a href="#" aria-label="Previous">-->
+                                    <!--<span aria-hidden="true">&laquo;</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li><a href="#">1</a></li>-->
+                            <!--<li><a href="#">2</a></li>-->
+                            <!--<li><a href="#">3</a></li>-->
+                            <!--<li><a href="#">4</a></li>-->
+                            <!--<li><a href="#">5</a></li>-->
+                            <!--<li>-->
+                                <!--<a href="#" aria-label="Next">-->
+                                    <!--<span aria-hidden="true">&raquo;</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    </div>
                 </div>
             </div>
         </section>
@@ -1187,9 +1165,22 @@
 <script>
     $(".info-toggle").click(function (e) {
         e.preventDefault();
-        console.log(this);
+
         $(".info-toggle").parents('.tab-pane').toggleClass("toggled");
     });
+    $('#timeline ul li a').click(function () {
+        if ($(this).parent('li').children('ul').children('li').is(':hidden')) {
+
+            $(this).children('i').removeClass('fa-angle-down');
+            $(this).children('i').addClass('fa-angle-up');
+            $(this).parent('li').children('ul').children('li').slideDown();
+        } else {
+            $(this).children('i').removeClass('fa-angle-up');
+            $(this).children('i').addClass('fa-angle-down');
+            $(this).parent('li').children('ul').children('li').slideUp();
+        }
+    });
+
 </script>
 </body>
 </html>
