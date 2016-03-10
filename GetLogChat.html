@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!--dataranger picker-->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
 </head>
 
 <body>
@@ -22,6 +27,37 @@
         </h1>
     </section>
     <section class="content">
+        <section>
+            <div class="row">
+                <div class="col-md-12">
+                    <form method="get">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input id="record-range" name="report-range" value="" type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-sm btn-primary" value="Lấy danh sách bản ghi">
+                                    <button class="btn btn-sm btn-warning" id="export-table" style="margin-left: 10px;">
+                                        <i class="fa fa-download"></i> Xuất ra file txt
+                                    </button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
         <section class="container box box-info">
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3 no-padding">
@@ -1162,6 +1198,11 @@
     </section>
 
 </div>
+
+<div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+    <span></span> <b class="caret"></b>
+</div>
 <script>
     $(".info-toggle").click(function (e) {
         e.preventDefault();
@@ -1180,7 +1221,40 @@
             $(this).parent('li').children('ul').children('li').slideUp();
         }
     });
+//    $('input[name="report-range"]').daterangepicker(
+//            {
+//                locale: {
+//                    format: 'YYYY-MM-DD'
+//                },
+//                startDate: '2013-01-01',
+//                endDate: '2013-12-31'
+//            },
+//            function(start, end, label) {
+//                alert("A new date range was chosen: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+//            });
+//
 
+    $(function() {
+
+        function cb(start, end) {
+            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+//            alert('Lấy được ngày rồi nhé!'+ start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY') );
+        }
+        cb(moment().subtract(29, 'days'), moment());
+
+        $('input[name="report-range"]').daterangepicker({
+            ranges: {
+                'Hôm nay': [moment(), moment()],
+                'Hôm qua': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                '7 ngày trước': [moment().subtract(6, 'days'), moment()],
+                '30 ngày trước': [moment().subtract(29, 'days'), moment()],
+                'Tháng này': [moment().startOf('month'), moment().endOf('month')],
+                'Tháng trước': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            }
+        }, cb);
+
+
+    });
 </script>
 </body>
 </html>
